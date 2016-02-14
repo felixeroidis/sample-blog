@@ -8,10 +8,42 @@
 </head>
 <body>
 
-<%= link_to "Home", root_path %>
-<%= link_to "New Post", new_post_path %>
+<div id="wrapper">
+
+<header>
+	<!-- Linking the website logo -->
+	<%= link_to image_tag("blogimage.png", alt: "Blog"), 
+	{:controller =>"posts", :action =>"index"},
+	{:class =>'websiteLogo'} %>
+
+	<!-- Linking the website name -->
+	<%= link_to 'Blog',
+	{:controller =>"posts", :action =>"index"},
+	{:class =>'websiteTitle'} %>
+
+</header>
+
+<!-- Adding a horizontal navegation -->
+<nav id="horizontalNav" >
+<p> 
+<%= link_to 'Home', {:controller =>"posts", :action =>"index"}%>
+<%= link_to 'New Post', {:controller =>"posts", :action =>"new"}%>
+<!--<%= link_to "Home", root_path %>
+<!--<%= link_to "New Post", new_post_path %>
+
+</p>
+</nav>
+
+<!-- Main region or page Content -->
+<main id="Content">
 
 <%= yield %>
+
+
+
+</main>
+
+</div> <!-- Endo of wrapper -->
 
 </body>
 </html>
