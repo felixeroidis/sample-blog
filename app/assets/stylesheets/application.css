@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *To pick your website colors go to:
+ *https://en.wikipedia.org/wiki/Web_colors
  */
 a:hover {
 	color: #007ebd;
@@ -19,7 +21,7 @@ a:hover {
 }
 
 body {
-	background: #5D8AA8;  /* lite blue */
+	background: #5D8AA8;  /* lite blue, all around the page */
 	color: olive;  /* posts text color*/
 	/* background: #808000 =oliva all around the page*/
 }
